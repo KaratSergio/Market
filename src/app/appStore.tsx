@@ -3,7 +3,7 @@ import '@shared/app.css'
 const App = () => {
   return (
     <div className="container text-center">
-      <h1 className="text-2xl md:text-5xl">
+      <h1 className="font-serif text-2xl md:text-5xl">
         <span className="market-word">
           <span className="letter">M</span>
           <span className="letter">A</span>
