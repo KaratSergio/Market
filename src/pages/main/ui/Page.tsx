@@ -1,14 +1,10 @@
 import { FC } from 'react'
 import '@shared/app.css'
-import { Link } from 'react-router-dom'
 
 export const MainPage: FC = () => {
   return (
     <>
       <div className="container mt-10 text-center">
-        <Link className="mx-auto" to="/profile">
-          <img src="/images/user.webp" alt="User Avatar" className="h-10 w-10 rounded-full" />
-        </Link>
         <h1 className="font-serif text-2xl md:text-5xl">
           <span className="market-word">
             <span className="letter">M</span>
