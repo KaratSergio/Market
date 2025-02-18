@@ -35,8 +35,8 @@ export const MobileMenu: FC = () => {
       </button>
 
       <div
-        className={`fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
-          isOpen ? 'scale-88 bg-transparent' : 'scale-100'
+        className={`fixed inset-0 z-40 transition-all duration-500 ease-in-out md:hidden ${
+          isOpen ? 'scale-80 bg-transparent' : 'scale-100'
         }`}
       >
         {/* Menu */}
