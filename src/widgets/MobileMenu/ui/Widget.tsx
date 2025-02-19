@@ -36,25 +36,22 @@ export const MobileMenu: FC = () => {
 
       <div
         className={`fixed inset-0 z-40 transition-all duration-500 ease-in-out md:hidden ${
-          isOpen ? 'scale-80 bg-transparent' : 'scale-100'
+          isOpen ? 'pointer-events-auto scale-80 bg-gray-100' : 'pointer-events-none scale-100'
         }`}
       >
         {/* Menu */}
         <div
-          className={`fixed top-0 right-0 h-full w-full bg-white shadow-2xl transition-transform duration-500 ${
+          className={`fixed top-0 right-0 h-full w-full bg-amber-200 shadow-2xl transition-transform duration-500 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <nav className="mt-20 flex flex-col items-center space-y-6">
-            <Link to="/" className="text-xl text-black" onClick={toggleMenu}>
-              Home
-            </Link>
-            <Link to="/profile" className="text-xl text-black" onClick={toggleMenu}>
-              Profile
-            </Link>
-            <Link to="/contact" className="text-xl text-black" onClick={toggleMenu}>
-              Contacts
-            </Link>
+          <nav
+            className="mt-20 flex flex-col items-center space-y-6 text-3xl text-black uppercase"
+            onClick={toggleMenu}
+          >
+            <Link to="/">Home</Link>
+            <Link to="/profile">Profile</Link>
+            <Link to="/contact">Contacts</Link>
           </nav>
         </div>
       </div>
