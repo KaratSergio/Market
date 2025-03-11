@@ -3,8 +3,20 @@ export interface Product {
     title: string;
     description: string;
     price: number;
+    discountPercentage?: number;
+    rating?: number;
+    stock?: number;
+    brand?: string;
+    category?: string;
     thumbnail: string;
+    meta: {
+        createdAt: string;
+        updatedAt: string;
+        barcode: string;
+        qrCode: string;
+    };
 }
+
 
 export interface ProductsState {
     items: Product[];
@@ -18,10 +30,3 @@ export const initialState: ProductsState = {
     error: null,
 };
 
-export interface Product {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    thumbnail: string;
-}

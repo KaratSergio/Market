@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ListingCard } from '../../../Entities/listing/ui/listingCard';
+import { ListingCard } from '@entities/listing/ui/listingCard';
 
 export const ListingReadPage: FC = () => {
 

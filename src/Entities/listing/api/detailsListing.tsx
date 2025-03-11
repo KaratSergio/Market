@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Product } from '../model/types'
+import { Product } from '@entities/listing/model/types';
 
 
 export const useProductFromLocation = () => {

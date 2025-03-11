@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useProductFromLocation } from '../api/detailsListing';
+import { useProductFromLocation } from '@entities/listing/api/detailsListing';
 import { useNavigate } from 'react-router-dom';
 
 export const ListingCard: FC = () => {
