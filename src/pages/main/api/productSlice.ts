@@ -1,27 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from './fetchProducts';
-
-interface Product {
-    id: number;
-    title: string;
-    description: string;
-    price: number;
-    thumbnail: string;
-    // When adding, an error appears in `state.items`
-    category: string;
-}
-
-interface ProductsState {
-    items: Product[];
-    loading: boolean;
-    error: string | null;
-}
-
-const initialState: ProductsState = {
-    items: [],
-    loading: false,
-    error: null,
-};
+import { initialState } from '../model/types'
 
 const productsSlice = createSlice({
     name: 'products',

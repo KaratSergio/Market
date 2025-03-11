@@ -1,18 +1,11 @@
-import { FC } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { FC } from 'react';
+import { useProductFromLocation } from '../api/detailsListing';
+import { useNavigate } from 'react-router-dom';
 
-interface Product {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    thumbnail: string;
-}
+export const ListingCard: FC = () => {
 
-export const Details: FC = () => {
-    const location = useLocation();
+    const product = useProductFromLocation();
     const navigate = useNavigate();
-    const product = location.state?.product as Product | undefined;
 
     if (!product) {
         navigate("/404");
@@ -29,4 +22,4 @@ export const Details: FC = () => {
             </div>
         </div>
     );
-};
+}
