@@ -11,7 +11,6 @@ export const AppRouter: FC = () => {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/profile" element={<ProfilePage />} />
-      
       <Route path="/auth" element={<AuthPage />} />
 
       <Route path="*" element={<NotFoundPage />} />
