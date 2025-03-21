@@ -25,15 +25,9 @@ export const RegisterForm: FC = () => {
   }
 
   return (
-    <form
-     onSubmit={handleSubmit(handleFormSubmit)}
-     className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit(handleFormSubmit)} className="flex flex-col gap-5">
       <p className="mb-8 text-base font-normal text-gray-400">Register on our platform</p>
-      <Input label="Name"
-      name="name"
-      placeholder="User name"
-      register={formRegister}
-      error={errors.name?.message} />
+      <Input label="Name" name="name" placeholder="User name" register={formRegister} error={errors.name?.message} />
 
       <Input
         label="Email"
@@ -53,7 +47,7 @@ export const RegisterForm: FC = () => {
         register={formRegister}
         error={errors.password?.message}
       />
-      <div className='flex flex-col gap-2.5'>
+      <div className="flex flex-col gap-2.5">
         <Button type="submit" variant="tertiary" className="">
           Create an account
         </Button>

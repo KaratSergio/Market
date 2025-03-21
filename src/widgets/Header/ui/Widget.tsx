@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { MobileMenu } from '@widgets/MobileMenu'
-import { Button } from '@shared/ui'
+import { AuthButton } from '@features/auth'
 
 export const Header: FC = () => {
   return (
@@ -9,7 +9,6 @@ export const Header: FC = () => {
       <Link className="bg-gray-400 p-5 text-xl font-extrabold" to="/">
         MARKETO
       </Link>
-
       <nav className="hidden gap-8 md:flex">
         <Link to="/Chat">Chat</Link>
         <Link to="/Like">Like</Link>
@@ -17,10 +16,7 @@ export const Header: FC = () => {
         <Link to="/profile">Your profile</Link>
       </nav>
 
-      <Button className="hidden md:block" variant="primary">
-        Add an ad
-      </Button>
-
+      <AuthButton className="hidden md:block" />
       <MobileMenu />
     </header>
   )

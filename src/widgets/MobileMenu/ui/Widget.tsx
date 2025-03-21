@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from '@shared/ui'
+import { AuthButton } from '@features/auth'
 
 export const MobileMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -54,7 +54,7 @@ export const MobileMenu: FC = () => {
             <Link to="/profile">Profile</Link>
           </nav>
 
-          <Button variant="primary">Add an ad</Button>
+          <AuthButton />
         </div>
       </div>
     </>
