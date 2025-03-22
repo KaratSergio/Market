@@ -5,6 +5,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@features/auth/ui/tabs
 
 export const AuthPage: FC = () => {
   return (
+
     <div className="flex min-h-screen flex-col lg:flex-row">
       <div className="flex w-full flex-col items-center px-[21px] pt-6 lg:px-55 lg:pt-15">
         <Tabs defaultValue="register" className="w-full max-w-[335px] lg:max-w-90">

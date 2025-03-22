@@ -5,6 +5,8 @@
   line-height: 1.5;
   font-weight: 400;
 
+  color: #000000;
+  background-color: #fafafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,4 +22,3 @@ body {
 .container {
   @apply max-w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
 }
-

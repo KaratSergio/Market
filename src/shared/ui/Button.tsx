@@ -9,7 +9,7 @@ export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
 export const Button: FC<ButtonProps> = ({ variant = 'primary', children, className, ...props }) => {
   const buttonClass = twMerge(
     'w-full rounded-full flex items-center justify-center px-5 py-3 cursor-pointer',
-    variant === 'primary' && 'bg-amber-600 text-white',
+    variant === 'primary' && 'bg-black text-white px-5 py-[14px] w-fit',
     variant === 'secondary' && 'bg-white text-black border border-[#e5e4df]',
     variant === 'tertiary' && 'bg-black text-white border-0',
     variant === 'quaternary' && 'bg-sky-400 text-yellow-400',

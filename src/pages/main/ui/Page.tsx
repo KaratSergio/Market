@@ -13,7 +13,7 @@ export const MainPage: FC = () => {
             <span className="letter">K</span>
             <span className="letter">E</span>
             <span className="letter">T</span>
-            widget list
+            <span className="letter font-extrabold text-sky-500">O</span>
           </span>
         </h1>
         <p className="typing-effect text-base md:text-2xl">
