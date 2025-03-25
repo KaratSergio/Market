@@ -3,7 +3,7 @@ import { getAdsList } from './adsApi'
 import { Ad, AdsState } from '../model/types'
 
 const initialState: AdsState = {
-  ads: null,
+  ads: [],
   isLoading: false,
   error: null,
 }
@@ -20,8 +20,7 @@ const adsSlice = createSlice({
       })
       .addCase(getAdsList.fulfilled, (state, action: PayloadAction<Ad[]>) => {
         state.isLoading = false
-        state.ads =
-          action.payload && Array.isArray(action.payload) ? action.payload : []
+        state.ads = action.payload
       })
       .addCase(getAdsList.rejected, (state, action) => {
         state.isLoading = false

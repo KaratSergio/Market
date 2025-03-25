@@ -1,5 +1,5 @@
 export interface AdsState {
-  ads: Ad[] | null
+  ads: Ad[]
   isLoading: boolean
   error: string | null
 }

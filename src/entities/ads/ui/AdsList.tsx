@@ -14,7 +14,9 @@ export const AdsList: FC = () => {
 
   return (
     <ul className="flex flex-wrap justify-center gap-6">
-      {Array.isArray(ads) && ads.map((ad) => <AdsItem key={ad.id} ad={ad} />)}
+      {ads.map((ad) => (
+        <AdsItem key={ad.id} ad={ad} />
+      ))}
     </ul>
   )
 }
