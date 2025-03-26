@@ -14,6 +14,7 @@ type InputProps<T extends FieldValues = FieldValues> = Partial<{
   validate: boolean
   showPasswordToggle: boolean
   placeholder: string
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }>
 
 export const Input = <T extends FieldValues>({
@@ -26,6 +27,7 @@ export const Input = <T extends FieldValues>({
   validate = true,
   showPasswordToggle = false,
   placeholder = '',
+  onChange,
 }: InputProps<T>) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
@@ -42,6 +44,7 @@ export const Input = <T extends FieldValues>({
           type={type === 'password' && isPasswordVisible ? 'text' : type}
           placeholder={placeholder}
           {...(validate && register && name ? register(name) : {})}
+          onChange={onChange}
           className={twMerge(
             'h-11 w-full rounded-xl border px-4 py-2 text-sm focus:ring-2 focus:ring-indigo-600 focus:outline-none',
             'transition-all duration-300 ease-in-out hover:shadow-[0px_4px_6px_2px_#0a1828]',
