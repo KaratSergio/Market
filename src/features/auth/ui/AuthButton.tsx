@@ -1,25 +1,22 @@
 import { Button } from '@shared/ui/Button'
 import { useNavigate } from 'react-router-dom'
+import { twMerge } from 'tailwind-merge'
 
 export const AuthButton = ({ className }: { className?: string }) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
     const token = localStorage.getItem('token')
-    if (token) {
-      navigate('/add-an-ad')
-    } else {
-      navigate('/auth')
-    }
+    navigate(token ? '/publish-ad' : '/auth')
   }
 
   return (
     <Button
-      className="w-fit px-5 py-[14px]"
+      className={twMerge('w-fit px-5 py-[14px]', className)}
       variant="primary"
       onClick={handleClick}
     >
-      Add an ad
+      Publish Ad
     </Button>
   )
 }

@@ -50,18 +50,37 @@ export const MobileMenu: FC = () => {
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <nav
-            className="flex flex-col items-center space-y-6 text-3xl text-black uppercase"
-            onClick={toggleMenu}
-          >
-            <Link to="/">Home</Link>
-            <Link to="/Chat">Chat</Link>
-            <Link to="/Like">Like</Link>
-            <Link to="/Notifications">Notifications</Link>
-            <Link to="/profile">Profile</Link>
+          <nav onClick={toggleMenu}>
+            <ul className="flex flex-col items-center gap-4 text-3xl text-black uppercase">
+              <li className="hover-nav px-20 py-2">
+                <Link className="hover-nav" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="hover-nav px-22 py-2">
+                <Link className="hover-nav" to="/chat">
+                  Chat
+                </Link>
+              </li>
+              <li className="hover-nav px-16 py-2">
+                <Link className="hover-nav" to="/like">
+                  Favorites
+                </Link>
+              </li>
+              <li className="hover-nav px-22 py-2">
+                <Link className="hover-nav" to="/alerts">
+                  Alerts
+                </Link>
+              </li>
+              <li className="hover-nav px-20 py-2">
+                <Link className="hover-nav" to="/profile">
+                  Profile
+                </Link>
+              </li>
+            </ul>
           </nav>
 
-          <AuthButton />
+          <AuthButton className="px-10 py-6 text-xl" />
         </div>
       </div>
     </>

@@ -19,6 +19,33 @@ body {
   min-height: 100vh;
 }
 
+/* page container settings */
 .container {
   @apply max-w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
 }
+
+/* navigation hover effect */
+/* ============================ */
+.hover-nav {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-nav::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  background-color: #494b4b;
+  transition: width 0.3s ease-out;
+}
+
+.hover-nav::before {
+  height: 3px;
+  width: 0%;
+  bottom: -2px;
+}
+
+.hover-nav:hover::before {
+  width: 100%;
+}
+/* =============================== */

@@ -10,7 +10,11 @@ export const MainPage: FC = () => {
     <div className="container mt-10 flex flex-col items-center justify-center text-center">
       <SearchInput />
 
-      <ul className="my-20 flex max-w-[992px] flex-wrap justify-center gap-4">
+      <h1 className="mt-20 mb-12 tracking-[6px] uppercase lg:text-4xl">
+        Categories
+      </h1>
+
+      <ul className="mb-20 flex max-w-[992px] flex-wrap justify-center gap-4">
         <li className={listItemClass}>Help</li>
         <li className={listItemClass}>Children's World</li>
         <li className={listItemClass}>Real Estate</li>
@@ -26,6 +30,8 @@ export const MainPage: FC = () => {
         <li className={listItemClass}>Exchange</li>
         <li className={listItemClass}>Gamer Goods</li>
       </ul>
+
+      <h2 className="mb-12 tracking-[6px] uppercase lg:text-4xl">Hot offers</h2>
 
       <AdsList />
     </div>
