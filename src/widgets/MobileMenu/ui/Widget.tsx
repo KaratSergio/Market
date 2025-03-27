@@ -29,7 +29,9 @@ export const MobileMenu: FC = () => {
         <div
           className={`h-1 w-6 bg-black transition-all duration-300 ${isOpen ? 'translate-y-2 rotate-45' : ''}`}
         ></div>
-        <div className={`h-1 w-6 bg-black transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></div>
+        <div
+          className={`h-1 w-6 bg-black transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}
+        ></div>
         <div
           className={`h-1 w-6 bg-black transition-all duration-300 ${isOpen ? '-translate-y-2 -rotate-45' : ''}`}
         ></div>
@@ -37,16 +39,21 @@ export const MobileMenu: FC = () => {
 
       <div
         className={`fixed inset-0 z-40 transition-all duration-500 ease-in-out md:hidden ${
-          isOpen ? 'pointer-events-auto scale-80 bg-gray-200' : 'pointer-events-none scale-100'
+          isOpen
+            ? 'pointer-events-auto scale-80 bg-gray-200'
+            : 'pointer-events-none scale-100'
         }`}
       >
-        {/* Menu */}
+        {/* MENU */}
         <div
           className={`fixed top-0 right-0 flex h-full w-full flex-col items-center justify-around rounded-br-full bg-gray-400 p-20 shadow-2xl transition-transform duration-500 ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <nav className="flex flex-col items-center space-y-6 text-3xl text-black uppercase" onClick={toggleMenu}>
+          <nav
+            className="flex flex-col items-center space-y-6 text-3xl text-black uppercase"
+            onClick={toggleMenu}
+          >
             <Link to="/">Home</Link>
             <Link to="/Chat">Chat</Link>
             <Link to="/Like">Like</Link>

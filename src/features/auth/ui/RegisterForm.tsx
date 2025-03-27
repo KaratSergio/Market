@@ -26,16 +26,20 @@ export const RegisterForm: FC = () => {
 
   return (
     <form
-    onSubmit={handleSubmit(handleFormSubmit)}
-    className="mx-auto flex w-full max-w-[335px] flex-col lg:max-w-90">
-      <p className="mb-8 text-base font-normal text-gray-400">Register on our platform</p>
+      onSubmit={handleSubmit(handleFormSubmit)}
+      className="mx-auto flex w-full max-w-[335px] flex-col lg:max-w-90"
+    >
+      <p className="mb-8 text-base font-normal text-gray-400">
+        Register on our platform
+      </p>
       <div className="flex flex-col gap-5">
         <Input
-        label="Name"
-        name="name"
-        placeholder="User name"
-        register={formRegister}
-        error={errors.name?.message} />
+          label="Name"
+          name="name"
+          placeholder="User name"
+          register={formRegister}
+          error={errors.name?.message}
+        />
 
         <Input
           label="Email"
@@ -58,7 +62,7 @@ export const RegisterForm: FC = () => {
       </div>
 
       <div className="mt-5 flex flex-col gap-2.5">
-        <Button type="submit" variant="tertiary">
+        <Button type="submit" variant="primary">
           Create an account
         </Button>
         <Button type="button" variant="secondary">

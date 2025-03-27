@@ -14,7 +14,7 @@ export const SearchInput = ({
         type="text"
         name="search"
         error={error}
-        className={`${className} h-20 rounded-full px-6 placeholder:text-2xl hover:!shadow-none focus:ring-gray-200`}
+        className={`${className} h-20 rounded-full px-6 placeholder:text-2xl`}
         placeholder={placeholder}
         onChange={(e) => onChange && onChange(e.target.value)}
       />

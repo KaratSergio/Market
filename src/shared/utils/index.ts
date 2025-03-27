@@ -1,1 +1,1 @@
-export { ValidationError } from './ValidationError'
+export { handleAxiosError } from './handleAxiosError'

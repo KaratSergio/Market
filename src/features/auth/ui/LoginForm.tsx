@@ -29,7 +29,9 @@ export const LoginForm: FC = () => {
       onSubmit={handleSubmit(handleFormSubmit)}
       className="mx-auto flex w-full max-w-[335px] flex-col lg:max-w-90"
     >
-      <p className="mb-8 text-base font-normal text-gray-400">Login to your profile</p>
+      <p className="mb-8 text-base font-normal text-gray-400">
+        Login to your profile
+      </p>
       <div className="flex flex-col gap-5">
         <Input
           label="Email"
@@ -50,7 +52,7 @@ export const LoginForm: FC = () => {
         />
       </div>
       <div className="mt-5 flex flex-col gap-2.5">
-        <Button type="submit" variant="tertiary">
+        <Button type="submit" variant="primary">
           Login
         </Button>
         <Button type="button" variant="secondary">

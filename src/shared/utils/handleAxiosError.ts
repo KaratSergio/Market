@@ -1,4 +1,4 @@
 import { AxiosError } from 'axios'
 
-export const handleError = (error: unknown) =>
+export const handleAxiosError = (error: unknown) =>
   error instanceof AxiosError ? error.response?.data : 'Unknown error occurred'

@@ -14,7 +14,11 @@ export const AuthButton = ({ className }: { className?: string }) => {
   }
 
   return (
-    <Button className={className} variant="primary" onClick={handleClick}>
+    <Button
+      className="w-fit px-5 py-[14px]"
+      variant="primary"
+      onClick={handleClick}
+    >
       Add an ad
     </Button>
   )
