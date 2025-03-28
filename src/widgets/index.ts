@@ -1,0 +1,5 @@
+export { Header } from './Header/ui/Widget'
+export { Footer } from './Footer/ui/Widget'
+export { MobileMenu } from './MobileMenu/ui/Widget'
+export { FAQSection } from './FAQSection/ui/Widget'
+export { BannerMarketo } from './Banners/ui/Widget'

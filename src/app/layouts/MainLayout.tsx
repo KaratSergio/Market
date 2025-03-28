@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react'
-import { Layout } from '@shared/ui'
-import { Header } from '@widgets/Header'
-import { Footer } from '@widgets/Footer'
+import { Layout } from '@shared/index'
+import { Header, Footer } from '@widgets/index'
 
 export const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (

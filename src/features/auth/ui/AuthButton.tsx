@@ -1,4 +1,4 @@
-import { Button } from '@shared/ui/Button'
+import { Button } from '@shared/index'
 import { useNavigate } from 'react-router-dom'
 import { twMerge } from 'tailwind-merge'
 

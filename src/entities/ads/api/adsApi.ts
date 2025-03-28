@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { apiClient } from '@shared/api/apiClient'
-import { handleAxiosError } from '@shared/utils'
+import { handleAxiosError, apiClient } from '@shared/index'
 
 export const getAdsList = createAsyncThunk(
   'ad/list',

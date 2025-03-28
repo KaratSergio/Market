@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { StoreProvider } from './providers/StoreProvider'
 import { RouterProvider } from './providers/RouterProvider'
-import '@shared/base.css'
+import '@shared/styles/base.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

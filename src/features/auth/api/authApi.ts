@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { apiClient } from '@shared/api/apiClient'
 import { LoginFormInputs, RegisterFormInputs } from '../model/types'
-import { handleAxiosError } from '@shared/utils'
+import { handleAxiosError, apiClient } from '@shared/index'
 
 export const register = createAsyncThunk(
   'auth/register',

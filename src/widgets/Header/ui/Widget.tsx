@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { MobileMenu } from '@widgets/MobileMenu'
-import { AuthButton } from '@features/auth'
+import { MobileMenu } from '@widgets/index'
+import { AuthButton } from '@features/index'
 
 export const Header: FC = () => {
   return (

@@ -6,7 +6,7 @@ import {
   TabsContent,
   LoginForm,
   RegisterForm,
-} from '@features/auth'
+} from '@features/index'
 
 export const AuthPage: FC = () => {
   return (
@@ -30,7 +30,7 @@ export const AuthPage: FC = () => {
         </Tabs>
       </div>
 
-      <div className="hidden min-h-screen w-1/2 items-center justify-center rounded-l-[80px] bg-[#faf689] lg:flex">
+      <div className="hidden min-h-screen w-2xl items-center justify-center rounded-l-[80px] bg-yellow-200 lg:flex">
         <img src="/images/img.png" alt="img" />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Input } from '@shared/ui'
+import { Input } from '@shared/index'
 import { FaSearch } from 'react-icons/fa'
 import { SearchInputProps } from '../model/types'
 

@@ -8,6 +8,7 @@ export const apiClient = axios.create({
   withCredentials: true,
 })
 
+// INTERCEPTORS
 // REQUEST
 apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
@@ -15,7 +16,8 @@ apiClient.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`
   }
 
-  config.headers['Content-Type'] = config.data instanceof FormData ? 'multipart/form-data' : 'application/json'
+  config.headers['Content-Type'] =
+    config.data instanceof FormData ? 'multipart/form-data' : 'application/json'
   return config
 })
 

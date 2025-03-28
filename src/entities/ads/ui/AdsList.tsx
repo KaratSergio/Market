@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { getAdsList } from '../api/adsApi'
 import { selectAds, selectIsLoading } from '../api/adsSelectors'
-import { useAppDispatch, useAppSelector } from '@shared/hooks/useRedux'
+import { useAppDispatch, useAppSelector } from '@shared/index'
 import { AdsItem } from './AdsItem'
 
 export const AdsList: FC = () => {

@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { AuthButton } from '@features/auth'
+import { AuthButton } from '@features/index'
 
 export const MobileMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false)

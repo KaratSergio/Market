@@ -2,7 +2,7 @@ import { FC, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AppRouter } from '@app/appRouter'
 import { MainLayout } from '@app/layouts/MainLayout'
-import { AuthPage } from '@pages/auth'
+import { AuthPage } from '@pages/index'
 
 export const RouterProvider: FC = () => (
   <BrowserRouter>

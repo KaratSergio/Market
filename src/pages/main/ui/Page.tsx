@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import { AdsList } from '@entities/ads'
-import { SearchInput } from '@features/search'
+import { AdsList } from '@entities/index'
+import { SearchInput } from '@features/index'
+import { FAQSection, BannerMarketo } from '@widgets/index'
 
 const listItemClass =
   'p-2 flex items-center justify-center size-32 border-gray-200 border-[4px] rounded-full text-lg cursor-pointer transition-all duration-300 hover:bg-gray-200'
@@ -34,6 +35,10 @@ export const MainPage: FC = () => {
       <h2 className="mb-12 tracking-[6px] uppercase lg:text-4xl">Hot offers</h2>
 
       <AdsList />
+
+      <BannerMarketo />
+
+      <FAQSection />
     </div>
   )
 }
