@@ -6,6 +6,8 @@ export { Input } from './ui/Input'
 // export { Modal } from './Modal'
 
 // UTILS FOLDER EXPORTS
+export { getAdStatus } from './utils/getAdStatus'
+export { getAdDayLeft } from './utils/getAdDayLeft'
 export { handleAxiosError } from './utils/handleAxiosError'
 
 // HOOKS FOLDER EXPORTS
