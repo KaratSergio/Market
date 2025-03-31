@@ -74,6 +74,11 @@ export interface Ad {
   comments: Comment[]
   favorites: Favorite[]
   payments: Payment[]
+  autoContinue: boolean;
+  contactPerson: string;
+  email: string;
+  phone: string;
+  name: string;
 }
 
 export interface AdsItemProps {
