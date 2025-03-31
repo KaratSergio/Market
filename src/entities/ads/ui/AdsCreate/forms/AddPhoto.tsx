@@ -44,6 +44,7 @@ export const AddPhoto: FC = () => {
           type="button"
           variant="secondary"
           className="bg-inh h-58 w-60 rounded-[16px] border-0 text-[24px] font-medium text-black hover:text-gray-400"
+          onClick={handleAddPhotoClick}
         >
           +Add photo
         </Button>
