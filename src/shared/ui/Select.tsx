@@ -53,7 +53,7 @@ export const Select = <T extends FieldValues>({
 
       <div
         className={twMerge(
-          'flex items-center justify-between h-11 px-4 bg-white border border-gray-300 rounded-lg cursor-pointer',
+          'flex items-center justify-between h-11 px-4 bg-white rounded-xl border border-gray-300 cursor-pointer',
           'transition-all duration-300 ease-in-out hover:shadow-md',
           error ? 'border-red-500' : 'border-gray-300'
         )}
