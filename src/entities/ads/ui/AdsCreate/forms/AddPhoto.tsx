@@ -42,9 +42,8 @@ export const AddPhoto: FC = () => {
       <div className="flex flex-wrap gap-x-10 gap-y-8">
         <Button
           type="button"
-          variant="tertiary"
-          className="bg-inh h-58 w-60 rounded-[16px] border-0 text-[24px] font-medium text-black"
-          onClick={handleAddPhotoClick}
+          variant="secondary"
+          className="bg-inh h-58 w-60 rounded-[16px] border-0 text-[24px] font-medium text-black hover:text-gray-400"
         >
           +Add photo
         </Button>
