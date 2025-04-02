@@ -10,7 +10,6 @@ export const RouterProvider: FC = () => (
       <Routes>
         {/* without MainLayout */}
         <Route path="/auth" element={<AuthPage />} />
-
         {/* with MainLayout */}
         <Route
           path="/*"

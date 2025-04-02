@@ -12,6 +12,9 @@ const ProfilePage = lazy(() =>
 const NotFoundPage = lazy(() =>
   import('../pages').then((module) => ({ default: module.NotFoundPage })),
 )
+const CreatePage = lazy(() =>
+  import('../pages').then((module) => ({ default: module.CreatePage })),
+)
 
 export const AppRouter: FC = () => {
   return (
@@ -22,6 +25,7 @@ export const AppRouter: FC = () => {
 
       <Route element={<PrivateRoute />}>
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/publish-ad" element={<CreatePage />} />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

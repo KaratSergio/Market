@@ -3,6 +3,11 @@ export { Dropdown } from './ui/Dropdown'
 export { Layout } from './ui/Layout'
 export { Button } from './ui/Button'
 export { Input } from './ui/Input'
+export { Select } from './ui/Select'
+export { Textarea } from './ui/Textarea'
+export { Switch } from './ui/Switch'
+
+
 // export { Modal } from './Modal'
 
 // UTILS FOLDER EXPORTS

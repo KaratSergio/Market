@@ -53,6 +53,13 @@ export interface Favorite {
   createdAt: string
 }
 
+// Interface for ContactPerson
+export interface ContactPerson {
+  email: string
+  phone: string
+  name: string
+}
+
 // Interface for Ad
 export interface Ad {
   id: string
@@ -74,6 +81,8 @@ export interface Ad {
   comments: Comment[]
   favorites: Favorite[]
   payments: Payment[]
+  autoContinue: boolean
+  contactPerson: ContactPerson
 }
 
 export interface AdsItemProps {

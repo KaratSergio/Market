@@ -8,6 +8,9 @@ type InputProps<T extends FieldValues> = {
   type?: 'text' | 'email' | 'password' | 'tel'
   name: Path<T> // REQUIRED FIELD NAME
   register?: UseFormRegister<T> // OPTIONAL REACT-HOOK-FORM REGISTER
+  value?: string
+  readOnly?: boolean
+  onClick?: () => void
   error?: string // ERROR MESSAGE FOR VALIDATION
   className?: string // CUSTOM STYLES
   showPasswordToggle?: boolean // ENABLE PASSWORD VISIBILITY TOGGLE
@@ -46,7 +49,7 @@ export const Input = <T extends FieldValues>({
           {...register?.(name)} // APPLY REACT-HOOK-FORM REGISTER IF PROVIDED
           onChange={onChange}
           className={twMerge(
-            'h-11 w-full rounded-xl border px-4 py-2 text-sm focus:ring-2 focus:ring-gray-200 focus:outline-none',
+            'h-11 w-full bg-white rounded-xl border px-4 py-2 text-sm focus:ring-2 focus:ring-gray-200 focus:outline-none',
             'transition-all duration-300 ease-in-out hover:shadow-[1px_0px_3px_0px_#c6c8cb]',
             error ? 'border-red-500' : 'border-gray-300',
             className,

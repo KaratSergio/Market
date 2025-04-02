@@ -24,7 +24,7 @@ export const Button: FC<ButtonProps> = ({
     variant === 'secondary' &&
       'bg-white text-black border border-gray-300 hover:bg-gray-100',
     // TERTIARY
-    variant === 'tertiary' && 'bg-black text-white border-0',
+    variant === 'tertiary' && 'bg-blue-400 text-white border-0 hover:bg-blue-300',
     // QUATERNARY
     variant === 'quaternary' && 'bg-sky-400 text-yellow-400',
     className,
