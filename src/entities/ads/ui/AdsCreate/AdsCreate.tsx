@@ -1,13 +1,8 @@
 import { FC } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import { Ad } from '../../model/types'
-import { Details } from './forms/Details'
-import { AddPhoto } from './forms/AddPhoto'
-import { Description } from './forms/Description'
-import { AutoContinue } from './forms/AutoContinue'
-import { Location } from './forms/Location'
-import { ContactDetails } from './forms/ContactDetails'
-import { Submit } from './forms/Submit'
+import { Details, AddPhoto, Description, AutoContinue, Location, ContactDetails, Submit } from './forms/index'
+
 
 export const AdsCreate: FC = () => {
   const methods = useForm<Ad>({})

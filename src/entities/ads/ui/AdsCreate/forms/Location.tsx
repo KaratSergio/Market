@@ -3,7 +3,7 @@ import { Select } from '@shared/index';
 import { useFormContext } from 'react-hook-form';
 import { Ad } from '../../../model/types';
 
-const LOCATION = ['Kyiv', 'Lviv', 'Ternopil', 'Dnipro'];
+const LOCATION = ['New York City', 'Los Angeles', 'Chicago', 'Philadelphia', 'San Antonio'];
 
 export const Location: FC = () => {
   const {

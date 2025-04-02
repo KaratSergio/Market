@@ -66,7 +66,7 @@ export const Select = <T extends FieldValues>({
       </div>
 
       {isOpen && (
-        <ul className="absolute right-0 left-0 z-10 mt-2 max-h-60 overflow-y-auto rounded-xl border border-gray-300 bg-white shadow-lg">
+        <ul className="absolute top-full mt-1 right-0 left-0 z-10 max-h-60 overflow-y-auto rounded-xl border border-gray-300 bg-white shadow-lg">
           {options.map((option, index) => (
             <li
               key={index}
