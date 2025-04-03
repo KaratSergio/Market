@@ -7,9 +7,12 @@ import { useAppDispatch, Input, Button } from '@shared/index'
 import { login } from '../api/authApi'
 import { FaApple } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
+import { useNavigate } from "react-router-dom";
 
 export const LoginForm: FC = () => {
   const dispatch = useAppDispatch()
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -17,10 +20,16 @@ export const LoginForm: FC = () => {
     reset,
   } = useForm<LoginFormInputs>({ resolver: yupResolver(loginSchema) })
 
-  const handleFormSubmit = (data: LoginFormInputs) => {
-    dispatch(login(data))
-    reset()
-  }
+  const handleFormSubmit = async (data: LoginFormInputs) => {
+    const result = await dispatch(login(data));
+
+    if (result.meta.requestStatus === "fulfilled") {
+      localStorage.setItem("token", "your-auth-token");
+      navigate("/publish-ad");
+    }
+
+    reset();
+  };
 
   return (
     <form
