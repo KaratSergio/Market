@@ -7,9 +7,12 @@ import { Button, Input, useAppDispatch } from '@shared/index'
 import { register } from '../api/authApi'
 import { FaApple } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
+import { useNavigate } from "react-router-dom"; 
 
 export const RegisterForm: FC = () => {
   const dispatch = useAppDispatch()
+  const navigate = useNavigate();
+
   const {
     register: formRegister,
     handleSubmit,
@@ -17,10 +20,15 @@ export const RegisterForm: FC = () => {
     reset,
   } = useForm<RegisterFormInputs>({ resolver: yupResolver(registerSchema) })
 
-  const handleFormSubmit = (data: RegisterFormInputs) => {
-    dispatch(register(data))
-    reset()
-  }
+ const handleFormSubmit = async (data: RegisterFormInputs) => {
+    const result = await dispatch(register(data));
+
+    if (result.meta.requestStatus === "fulfilled") {
+      navigate("/auth?tab=login");
+    }
+
+    reset();
+  };
 
   return (
     <form
