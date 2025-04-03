@@ -14,7 +14,7 @@ export const ContactDetails: FC = () => {
       <h3 className="text-[36px] font-medium">Your contact details</h3>
       <Input
         label="Contact person"
-        name="contactPerson"
+        name="contactPerson.name" 
         className="w-90"
         register={register}
         placeholder="Enter your name"
@@ -23,20 +23,20 @@ export const ContactDetails: FC = () => {
       <Input
         label="Email-address"
         type="email"
-        name="email"
+        name="contactPerson.email"
         className="w-90"
         register={register}
         placeholder="Enter your email"
-        error={errors.email?.message}
+        error={errors.contactPerson?.email?.message}
       />
       <Input
         label="Phone number"
         type="tel"
-        name="phone"
+        name="contactPerson.phone"
         className="w-90"
         register={register}
         placeholder="Enter your phone"
-        error={errors.phone?.message}
+        error={errors.contactPerson?.phone?.message}
       />
     </div>
   );
