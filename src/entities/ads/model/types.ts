@@ -63,6 +63,7 @@ export interface ContactPerson {
 // Interface for Ad
 export interface Ad {
   id: string
+  name: string;
   title: string
   description: string
   price: string // Use string for Decimal type
