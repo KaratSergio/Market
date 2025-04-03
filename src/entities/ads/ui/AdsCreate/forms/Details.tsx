@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
-// import { FieldValues } from 'react-hook-form';
 import { Input, Select } from '@shared/index';
 import { Ad } from '../../../model/types';
 
