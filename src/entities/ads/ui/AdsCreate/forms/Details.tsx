@@ -26,7 +26,7 @@ export const Details: FC = () => {
     formState: { errors },
   } = useFormContext<Ad>();
   return (
-    <div className="flex flex-col gap-6 rounded-[16px] bg-neutral-100 p-10 pr-94 pl-22">
+    <div className="container flex flex-col gap-6 rounded-[16px] bg-neutral-100 p-10 pr-94 pl-22">
       <h3 className="text-[32px] font-medium">Describe in detail</h3>
       <Input
         label="Enter a name"
