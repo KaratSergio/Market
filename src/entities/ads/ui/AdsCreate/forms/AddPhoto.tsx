@@ -7,7 +7,8 @@ const MAX_IMAGES = 7;
 
 export const AddPhoto: FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [images, setImages] = useState<string[]>(Array(MAX_IMAGES).fill(null));
+  const [images, setImages] = useState<(string | null)[]>(Array(MAX_IMAGES).fill(null));
+
 
   const handleAddPhotoClick = () => {
     if (fileInputRef.current) {
@@ -35,7 +36,14 @@ export const AddPhoto: FC = () => {
   };
 
   const handleRemovePhoto = (index: number) => {
-    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
+    setImages((prevImages) => {
+      const filteredImages = prevImages.filter((src, i) => i !== index && src !== null);
+      const filledArray = [...filteredImages];
+      while (filledArray.length < MAX_IMAGES) {
+        filledArray.push(null);
+      }
+      return filledArray;
+    });
   };
 
   return (
@@ -53,7 +61,9 @@ export const AddPhoto: FC = () => {
         >
           +Add photo
         </Button>
-        <input type="file" accept="image/*" ref={fileInputRef} className="hidden" onChange={handleFileChange} />
+        <input type="file" accept="image/*" multiple ref={fileInputRef} className="hidden" onChange={handleFileChange}
+/>
+
         {images.map((src, index) => (
           <div
             key={index}
