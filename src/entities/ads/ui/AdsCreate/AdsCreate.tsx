@@ -24,7 +24,7 @@ export const AdsCreate: FC = () => {
     <FormProvider {...methods}>
       <form
         onSubmit={handleSubmit(handleFormSubmit)}
-        className="mt flex w-320 flex-col gap-4"
+        className="flex flex-col gap-4 w-full "
       >
         <Details />
         <AddPhoto />
